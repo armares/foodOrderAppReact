@@ -38,7 +38,8 @@
   
   .bump {
     animation: bump 300ms ease-out;
-  }
+    -webkit-animation: bump 300ms ease-out;
+}
   
   @keyframes bump {
     0% {
