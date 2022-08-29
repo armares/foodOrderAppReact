@@ -17,11 +17,12 @@ const HeaderCartButton = ({onShowCart}) => {
     }
     setBtnIsHighlighted(true);
     const time=setTimeout(()=>{
+      console.log('ciao');
       setBtnIsHighlighted(false);
-      return ()=>{
-        clearTimeout(time);
-      }
     },100);
+    return ()=>{
+      clearTimeout(time);
+    }
   },[items]);
   return (
     <button onClick={onShowCart} className={btnClasses}>
@@ -29,7 +30,7 @@ const HeaderCartButton = ({onShowCart}) => {
             <CartIcon/>
         </span>
         <span>
-            Your Cart
+            Your Cart 
         </span>
         <span className={classes.badge}>
             {numberOfCartItems}

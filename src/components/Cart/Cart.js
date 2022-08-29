@@ -62,7 +62,7 @@ const Cart = ({onHideCart}) => {
         {isSubmitting && <p>Sending order data...</p>}
         {didSubmit && 
         <React.Fragment>
-            <p>Succesfully sent the order!</p>
+            <p>Successfully sent the order!</p>
             <div className={styles.actions}>
                 <button onClick={onHideCart} className={styles['button--alt']}>Close</button>                
             </div>

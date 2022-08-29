@@ -16,6 +16,7 @@ const AvailableMeals = () => {
           throw new Error('Something went wrong!');
         }
         const data=await response.json();
+        console.log(data);
         const loadedMeals=[];
         for (const key in data) {
           loadedMeals.push({
@@ -38,8 +39,8 @@ const AvailableMeals = () => {
     const mealsList=meals.map((meal)=>{
         return <MealItem name={meal.name} description={meal.description} price={meal.price} id={meal.id} key={meal.id}/>
     })
-    console.log(isLoading);
-    console.log(httpError);
+    // console.log(isLoading);
+    // console.log(httpError);
   return (
     <section className={classes.meals}>
       <Card>
